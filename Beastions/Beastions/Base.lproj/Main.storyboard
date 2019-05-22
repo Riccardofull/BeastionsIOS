@@ -18,9 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-ho-EmX">
-                                <rect key="frame" x="67" y="116" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Titolo" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-ho-EmX">
+                                <rect key="frame" x="20" y="116" width="335" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="XJU-nw-qmi"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-d3-A2o">
                                 <rect key="frame" x="169" y="437" width="30" height="30"/>
@@ -38,9 +40,8 @@
                                     <segue destination="Cnq-NA-eKv" kind="showDetail" id="YdN-Qt-Ygz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-tn-r5X">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-tn-r5X">
                                 <rect key="frame" x="169" y="321" width="30" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1"/>
                                 <connections>
                                     <segue destination="0K1-AV-SWc" kind="show" id="9b2-FY-fFo"/>
@@ -48,6 +49,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TC0-ho-EmX" secondAttribute="trailing" constant="20" id="7Ky-da-CE7"/>
+                            <constraint firstItem="TC0-ho-EmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D9l-Rt-9zO"/>
+                            <constraint firstItem="TC0-ho-EmX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="ItO-S5-S1o"/>
+                            <constraint firstItem="yl4-tn-r5X" firstAttribute="top" secondItem="TC0-ho-EmX" secondAttribute="bottom" constant="77" id="WP9-oY-jRs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -101,4 +108,7 @@
             <point key="canvasLocation" x="2247" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Titolo" width="300" height="69"/>
+    </resources>
 </document>

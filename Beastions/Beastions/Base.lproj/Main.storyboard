@@ -14,40 +14,55 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Beastions" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-ho-EmX">
-                                <rect key="frame" x="67" y="116" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-d3-A2o">
-                                <rect key="frame" x="169" y="437" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="2"/>
-                                <connections>
-                                    <segue destination="JXV-di-9mq" kind="showDetail" id="C8g-qC-b4l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhy-sV-I5k">
-                                <rect key="frame" x="175" y="544" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="3"/>
-                                <connections>
-                                    <segue destination="Cnq-NA-eKv" kind="showDetail" id="YdN-Qt-Ygz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-tn-r5X">
-                                <rect key="frame" x="169" y="321" width="30" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="1"/>
-                                <connections>
-                                    <segue destination="0K1-AV-SWc" kind="show" id="9b2-FY-fFo"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="URi-Zb-Zfu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-ho-EmX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="294"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-tn-r5X">
+                                        <rect key="frame" x="0.0" y="294" width="375" height="117.5"/>
+                                        <state key="normal" title="1"/>
+                                        <connections>
+                                            <segue destination="0K1-AV-SWc" kind="show" id="9b2-FY-fFo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-d3-A2o">
+                                        <rect key="frame" x="0.0" y="411.5" width="375" height="118"/>
+                                        <state key="normal" title="2"/>
+                                        <connections>
+                                            <segue destination="JXV-di-9mq" kind="showDetail" id="C8g-qC-b4l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhy-sV-I5k">
+                                        <rect key="frame" x="0.0" y="529.5" width="375" height="117.5"/>
+                                        <state key="normal" title="3"/>
+                                        <connections>
+                                            <segue destination="Cnq-NA-eKv" kind="showDetail" id="YdN-Qt-Ygz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SaM-d3-A2o" firstAttribute="height" secondItem="yl4-tn-r5X" secondAttribute="height" id="CT4-wK-1mJ"/>
+                                    <constraint firstItem="SaM-d3-A2o" firstAttribute="width" secondItem="yl4-tn-r5X" secondAttribute="width" id="CfE-17-bJD"/>
+                                    <constraint firstItem="yl4-tn-r5X" firstAttribute="height" secondItem="TC0-ho-EmX" secondAttribute="height" multiplier="0.4" id="NoO-o8-EUd"/>
+                                    <constraint firstItem="Fhy-sV-I5k" firstAttribute="width" secondItem="yl4-tn-r5X" secondAttribute="width" id="W2C-Oo-aLc"/>
+                                    <constraint firstItem="yl4-tn-r5X" firstAttribute="width" secondItem="TC0-ho-EmX" secondAttribute="width" id="bdf-Ul-WCK"/>
+                                    <constraint firstItem="Fhy-sV-I5k" firstAttribute="height" secondItem="yl4-tn-r5X" secondAttribute="height" id="e6L-x0-KfP"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WbN-3d-aw8"/>
+                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hEk-Wo-5RS"/>
+                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mlu-CN-vhd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URi-Zb-Zfu" secondAttribute="trailing" id="xJ4-EN-Cfa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

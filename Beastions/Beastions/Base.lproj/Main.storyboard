@@ -10,46 +10,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MAIN-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Beastions" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                <viewController title="MAIN" id="BYZ-38-t0r" customClass="ViewController" customModule="Beastions" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="URi-Zb-Zfu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="URi-Zb-Zfu">
+                                <rect key="frame" x="50" y="70" width="275" height="547"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TC0-ho-EmX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="294"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="122"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-tn-r5X">
-                                        <rect key="frame" x="0.0" y="294" width="375" height="117.5"/>
-                                        <state key="normal" title="1"/>
+                                        <rect key="frame" x="0.0" y="142" width="275" height="121.5"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                        <state key="normal" title="PLAY">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="0K1-AV-SWc" kind="show" id="9b2-FY-fFo"/>
+                                            <segue destination="0K1-AV-SWc" kind="presentation" modalTransitionStyle="crossDissolve" id="nvN-OR-8ch"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaM-d3-A2o">
-                                        <rect key="frame" x="0.0" y="411.5" width="375" height="118"/>
-                                        <state key="normal" title="2"/>
+                                        <rect key="frame" x="0.0" y="283.5" width="275" height="122"/>
+                                        <color key="backgroundColor" red="0.23529411759999999" green="0.52941176469999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                        <state key="normal" title="INFO">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="JXV-di-9mq" kind="showDetail" id="C8g-qC-b4l"/>
+                                            <segue destination="JXV-di-9mq" kind="presentation" modalTransitionStyle="crossDissolve" id="mYi-3S-09i"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhy-sV-I5k">
-                                        <rect key="frame" x="0.0" y="529.5" width="375" height="117.5"/>
-                                        <state key="normal" title="3"/>
+                                        <rect key="frame" x="0.0" y="425.5" width="275" height="121.5"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                        <state key="normal" title="LEADERBOARD">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="Cnq-NA-eKv" kind="showDetail" id="YdN-Qt-Ygz"/>
+                                            <segue destination="Cnq-NA-eKv" kind="presentation" modalTransitionStyle="crossDissolve" id="kag-bK-CDr"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="SaM-d3-A2o" firstAttribute="height" secondItem="yl4-tn-r5X" secondAttribute="height" id="CT4-wK-1mJ"/>
                                     <constraint firstItem="SaM-d3-A2o" firstAttribute="width" secondItem="yl4-tn-r5X" secondAttribute="width" id="CfE-17-bJD"/>
-                                    <constraint firstItem="yl4-tn-r5X" firstAttribute="height" secondItem="TC0-ho-EmX" secondAttribute="height" multiplier="0.4" id="NoO-o8-EUd"/>
                                     <constraint firstItem="Fhy-sV-I5k" firstAttribute="width" secondItem="yl4-tn-r5X" secondAttribute="width" id="W2C-Oo-aLc"/>
                                     <constraint firstItem="yl4-tn-r5X" firstAttribute="width" secondItem="TC0-ho-EmX" secondAttribute="width" id="bdf-Ul-WCK"/>
                                     <constraint firstItem="Fhy-sV-I5k" firstAttribute="height" secondItem="yl4-tn-r5X" secondAttribute="height" id="e6L-x0-KfP"/>
@@ -58,10 +69,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WbN-3d-aw8"/>
-                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hEk-Wo-5RS"/>
-                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mlu-CN-vhd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URi-Zb-Zfu" secondAttribute="trailing" id="xJ4-EN-Cfa"/>
+                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hEk-Wo-5RS"/>
+                            <constraint firstItem="URi-Zb-Zfu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="mlu-CN-vhd"/>
+                            <constraint firstAttribute="bottom" secondItem="URi-Zb-Zfu" secondAttribute="bottom" constant="50" id="rMX-vv-w2s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URi-Zb-Zfu" secondAttribute="trailing" constant="50" id="xJ4-EN-Cfa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -70,14 +81,51 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
         </scene>
-        <!--View Controller-->
+        <!--LEADERBOARD-->
         <scene sceneID="uMG-zg-4Tg">
             <objects>
-                <viewController id="Cnq-NA-eKv" sceneMemberID="viewController">
+                <viewController title="LEADERBOARD" id="Cnq-NA-eKv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NGx-i1-r9a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCg-8j-TS8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.24313725489999999" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="LeaderBoard" leftItemsSupplementBackButton="YES" id="v5H-6K-aVK">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="TbX-PS-fzj">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" restorationIdentifier="BackButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rwk-Qa-ham">
+                                                <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="backicon"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" id="TVb-4q-Xrh"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wl5-i5-RQX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cCg-8j-TS8" firstAttribute="top" secondItem="mTc-ha-wEy" secondAttribute="top" id="5u1-lE-flC"/>
+                            <constraint firstItem="cCg-8j-TS8" firstAttribute="trailing" secondItem="Wl5-i5-RQX" secondAttribute="trailing" id="I1Q-G9-uUq"/>
+                            <constraint firstItem="Wl5-i5-RQX" firstAttribute="leading" secondItem="mTc-ha-wEy" secondAttribute="leading" id="RWx-S6-SMO"/>
+                            <constraint firstItem="Wl5-i5-RQX" firstAttribute="trailing" secondItem="mTc-ha-wEy" secondAttribute="trailing" id="TjJ-lC-lPe"/>
+                            <constraint firstItem="cCg-8j-TS8" firstAttribute="leading" secondItem="Wl5-i5-RQX" secondAttribute="leading" id="Xl8-1u-dJj"/>
+                            <constraint firstItem="Wl5-i5-RQX" firstAttribute="top" secondItem="cCg-8j-TS8" secondAttribute="bottom" id="bY2-ty-kGh"/>
+                            <constraint firstItem="mTc-ha-wEy" firstAttribute="bottom" secondItem="Wl5-i5-RQX" secondAttribute="bottom" id="xM9-rH-qj4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mTc-ha-wEy"/>
                     </view>
                 </viewController>
@@ -85,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1487" y="998"/>
         </scene>
-        <!--View Controller-->
+        <!--PLAY-->
         <scene sceneID="rYm-1h-IqD">
             <objects>
-                <viewController id="0K1-AV-SWc" sceneMemberID="viewController">
+                <viewController title="PLAY" id="0K1-AV-SWc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTC-d1-9ZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,20 +148,72 @@
             </objects>
             <point key="canvasLocation" x="1228" y="-436"/>
         </scene>
-        <!--View Controller-->
+        <!--INFO-->
         <scene sceneID="myf-wQ-VPH">
             <objects>
-                <viewController id="JXV-di-9mq" sceneMemberID="viewController">
+                <viewController title="INFO" id="JXV-di-9mq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UdF-Q8-2C4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhq-fj-ADe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.24313725489999999" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Informations" leftItemsSupplementBackButton="YES" id="irG-Bl-LtH">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="bQU-DL-pYC">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tHp-NR-DWa">
+                                                <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="backicon"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jzu-JT-Pc0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cKe-Na-arH">
+                                    <size key="itemSize" width="331" height="478"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HAJ-42-ItX">
+                                        <rect key="frame" x="22" y="0.0" width="331" height="478"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="331" height="478"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yhq-fj-ADe" firstAttribute="leading" secondItem="PeE-Vp-YU3" secondAttribute="leading" id="0sp-Qd-LXh"/>
+                            <constraint firstItem="PeE-Vp-YU3" firstAttribute="trailing" secondItem="jzu-JT-Pc0" secondAttribute="trailing" id="7V0-NV-9Gg"/>
+                            <constraint firstItem="Yhq-fj-ADe" firstAttribute="top" secondItem="PeE-Vp-YU3" secondAttribute="top" id="8T7-XH-sxm"/>
+                            <constraint firstItem="Yhq-fj-ADe" firstAttribute="trailing" secondItem="PeE-Vp-YU3" secondAttribute="trailing" id="aP8-gk-KYm"/>
+                            <constraint firstItem="jzu-JT-Pc0" firstAttribute="leading" secondItem="PeE-Vp-YU3" secondAttribute="leading" id="cVC-Nw-BvC"/>
+                            <constraint firstItem="jzu-JT-Pc0" firstAttribute="top" secondItem="Yhq-fj-ADe" secondAttribute="bottom" id="jB6-N7-ydn"/>
+                            <constraint firstItem="PeE-Vp-YU3" firstAttribute="bottom" secondItem="jzu-JT-Pc0" secondAttribute="bottom" id="yZf-Mf-VZ0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PeE-Vp-YU3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwd-1Y-ZGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2247" y="130"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backicon" width="22" height="22"/>
+    </resources>
 </document>

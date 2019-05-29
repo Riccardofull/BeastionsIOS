@@ -11,6 +11,6 @@ import Foundation
 struct LetherboardModel {
     var Id : Int
     var Name : String
-    var Record : Int
+    var Points : Int
     var Character : String
 }

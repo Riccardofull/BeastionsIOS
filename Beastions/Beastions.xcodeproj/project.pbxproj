@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		549CDBBAE374F67CC34C55A9 /* Pods_Beastions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC27C3FEB1472D5A22947D2B /* Pods_Beastions.framework */; };
+		80DB91E82295A2CC004A705F /* LetherboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB91E72295A2CC004A705F /* LetherboardTableViewController.swift */; };
+		80DB91EA2295A3F6004A705F /* LetherboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB91E92295A3F6004A705F /* LetherboardModel.swift */; };
 		AD0CB9FF2295776A00CDB914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CB9FE2295776A00CDB914 /* AppDelegate.swift */; };
 		AD0CBA012295776A00CDB914 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CBA002295776A00CDB914 /* ViewController.swift */; };
 		AD0CBA042295776A00CDB914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD0CBA022295776A00CDB914 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80DB91E72295A2CC004A705F /* LetherboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardTableViewController.swift; sourceTree = "<group>"; };
+		80DB91E92295A3F6004A705F /* LetherboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardModel.swift; sourceTree = "<group>"; };
 		AD0CB9FB2295776A00CDB914 /* Beastions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beastions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0CB9FE2295776A00CDB914 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0CBA002295776A00CDB914 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				AD0CBA052295776C00CDB914 /* Assets.xcassets */,
 				AD0CBA072295776C00CDB914 /* LaunchScreen.storyboard */,
 				AD0CBA0A2295776C00CDB914 /* Info.plist */,
+				80DB91E72295A2CC004A705F /* LetherboardTableViewController.swift */,
+				80DB91E92295A3F6004A705F /* LetherboardModel.swift */,
 			);
 			path = Beastions;
 			sourceTree = "<group>";
@@ -214,7 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DB91E82295A2CC004A705F /* LetherboardTableViewController.swift in Sources */,
 				AD0CBA012295776A00CDB914 /* ViewController.swift in Sources */,
+				80DB91EA2295A3F6004A705F /* LetherboardModel.swift in Sources */,
 				AD0CB9FF2295776A00CDB914 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,7 @@ class LetherboardService{
             let snapshots = snapshot.children.allObjects as? [DataSnapshot]
             
             if let snapshots = snapshots {
-                for snap in snapshots.reversed() {
+                for snap in snapshots {
                     var letherboard = LetherboardModel(snapshot: snap)
                     
                     if letherboard != nil {

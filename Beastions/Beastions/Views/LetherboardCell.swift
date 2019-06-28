@@ -25,6 +25,6 @@ class LetherboardCell: UITableViewCell {
     func setLabel(_ letherboard:LetherboardModel){
         nameLabel.text = letherboard.name
         characterLabel.text = letherboard.character
-        pointsLabel.text = "\(letherboard.id as! Int)"
+        pointsLabel.text = "\(letherboard.points as! Int)"
     }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		549CDBBAE374F67CC34C55A9 /* Pods_Beastions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC27C3FEB1472D5A22947D2B /* Pods_Beastions.framework */; };
 		803E5E5C229ED90200990C3B /* LetherboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E5E5B229ED90200990C3B /* LetherboardCell.swift */; };
+		80D69E9922B29A70008E840C /* LetherboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D69E9822B29A70008E840C /* LetherboardService.swift */; };
 		80DB91E82295A2CC004A705F /* LetherboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB91E72295A2CC004A705F /* LetherboardTableViewController.swift */; };
 		80DB91EA2295A3F6004A705F /* LetherboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DB91E92295A3F6004A705F /* LetherboardModel.swift */; };
 		AD0CB9FF2295776A00CDB914 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0CB9FE2295776A00CDB914 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		803E5E5B229ED90200990C3B /* LetherboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardCell.swift; sourceTree = "<group>"; };
+		80D69E9822B29A70008E840C /* LetherboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardService.swift; sourceTree = "<group>"; };
 		80DB91E72295A2CC004A705F /* LetherboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardTableViewController.swift; sourceTree = "<group>"; };
 		80DB91E92295A3F6004A705F /* LetherboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetherboardModel.swift; sourceTree = "<group>"; };
 		AD0CB9FB2295776A00CDB914 /* Beastions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beastions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		80D69E9722B29A49008E840C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				80D69E9822B29A70008E840C /* LetherboardService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		91F697751B248577E40315A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		AD0CB9FD2295776A00CDB914 /* Beastions */ = {
 			isa = PBXGroup;
 			children = (
+				80D69E9722B29A49008E840C /* Services */,
 				803E5E5A229ED8D000990C3B /* ViewControllers */,
 				803E5E59229ED8B200990C3B /* Models */,
 				803E5E58229ED89D00990C3B /* Views */,
@@ -136,6 +147,7 @@
 				AD0CB9F82295776A00CDB914 /* Frameworks */,
 				AD0CB9F92295776A00CDB914 /* Resources */,
 				352749FDA97462A007D3A0D9 /* [CP] Embed Pods Frameworks */,
+				4538313DB0FD7C1F8DD9328C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,19 +215,45 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Beastions/Pods-Beastions-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beastions/Pods-Beastions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4538313DB0FD7C1F8DD9328C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beastions/Pods-Beastions-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beastions/Pods-Beastions-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C4595310AFAC9997AC1EAC9B /* [CP] Check Pods Manifest.lock */ = {
@@ -247,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D69E9922B29A70008E840C /* LetherboardService.swift in Sources */,
 				80DB91E82295A2CC004A705F /* LetherboardTableViewController.swift in Sources */,
 				803E5E5C229ED90200990C3B /* LetherboardCell.swift in Sources */,
 				AD0CBA012295776A00CDB914 /* ViewController.swift in Sources */,

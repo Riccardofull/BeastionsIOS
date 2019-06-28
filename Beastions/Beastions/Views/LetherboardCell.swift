@@ -23,8 +23,8 @@ class LetherboardCell: UITableViewCell {
     }
     
     func setLabel(_ letherboard:LetherboardModel){
-        nameLabel.text="Francesco"
-        characterLabel.text="Paperella"
-        pointsLabel.text="20"
+        nameLabel.text = letherboard.name
+        characterLabel.text = letherboard.character
+        pointsLabel.text = "\(letherboard.id as! Int)"
     }
 }

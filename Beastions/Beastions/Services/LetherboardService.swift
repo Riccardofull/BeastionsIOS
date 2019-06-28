@@ -27,8 +27,6 @@ class LetherboardService{
                     if letherboard != nil {
                         retrievedLetherboards.insert(letherboard!, at: 0)
                     }
-                    
-                    print(letherboard?.character as! String)
                 }
             }
             complenion(retrievedLetherboards)
